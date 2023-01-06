@@ -129,7 +129,6 @@ namespace estoqueweb.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Senha")
-                        .IsRequired()
                         .HasMaxLength(128)
                         .HasColumnType("TEXT");
 

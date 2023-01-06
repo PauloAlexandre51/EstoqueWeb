@@ -17,7 +17,7 @@ namespace EstoqueWeb.Models
         [Required, MaxLength(128)]
         public string Email { get; set; }
 
-        [Required, MaxLength(128)]
+        [MaxLength(128)]
         public string Senha { get; set; }
 
         [ReadOnly(true)]

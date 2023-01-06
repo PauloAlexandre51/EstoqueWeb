@@ -5,18 +5,22 @@
     var classeMenuPrincipal = controllerAtual == "Home" ? "active" : "";
     var classeMenuProdutos = controllerAtual == "Produto" ? "active" : "";
     var classeMenuCategorias = controllerAtual == "Categoria" ? "active" : "";
+    var classeMenuClientes = controllerAtual == "Cliente" ? "active" : "";
 }
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/lib/bootstrap5/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/lib/bootstrap-icons/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/css/estilos.css">
     <title>EstoqueWeb :: @ViewBag.Subtitulo</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -30,6 +34,8 @@
                     <a class="nav-link @classeMenuProdutos" asp-controller="Produto" asp-action="Index">Produtos</a>
                     <a class="nav-link @classeMenuCategorias" asp-controller="Categoria"
                         asp-action="Index">Categorias</a>
+                    <a class="nav-link @classeMenuClientes" asp-controller="Cliente"
+                        asp-action="Index">Clientes</a>
                 </div>
             </div>
         </div>
@@ -46,5 +52,8 @@
 
     <script src="/lib/bootstrap5/dist/js/bootstrap.js"></script>
 
+    @RenderSection("Scripts", false)
+
 </body>
+
 </html>
